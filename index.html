@@ -3,13 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="" />
     <link rel="stylesheet" href="style.css" />
-    <title>Simulador Financeiro</title>
+    <title>Kora</title>
   </head>
   <body>
     <div class="page">
       <div class="header">
-        <div class="t1">simulador financeiro</div>
+        <div class="t1">Simulador Financeiro</div>
         <div class="title">Consórcio, financiamento ou empréstimo</div>
         <div class="sub">
           Preencha suas informações e descubra a melhor opção para você!
@@ -25,7 +26,26 @@
           <input type="number" id="valor" value="valor" />
         </div>
       </div>
-      <div class="field"></div>
+      <div class="field">
+        <label>Finalidade</label>
+        <select id="finalidade">
+          <option value="veiculo">Veículo</option>
+          <option value="casa">Casa</option>
+          <option value="outros">Outros</option>
+        </select>
+      </div>
+      <div id="resultado" style="display: none">
+        <div class="option-cards" id="opt-cards"></div>
+        <div class="card">
+          <table id="tabela-resultados"></table>
+        </div>
+
+        <div class="pros-grid" id="pros-grid"></div>
+        <div class="recom" id="recom-box">
+          <div class="recom-title" id="recom-title"></div>
+          <div class="recom-body" id="recom-body"></div>
+        </div>
+      </div>
     </div>
   </body>
 </html>
