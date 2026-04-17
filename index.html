@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -16,30 +16,69 @@
           Preencha suas informações e descubra a melhor opção para você!
         </div>
       </div>
+
       <div class="card">
         <div class="card-title">1. Sobre o valor</div>
+        <div class="grid">
+          <div class="grid-item">
+            <label for="valor">Valor necessário (R$)</label>
+            <input type="number" id="valor" placeholder="Ex: 50000" />
+          </div>
+          <div class="field">
+            <label for="finalidade">Finalidade</label>
+            <select id="finalidade">
+              <option value="veiculo">Veículo</option>
+              <option value="casa">Casa</option>
+              <option value="outros">Outros</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="card-title">2. Sua situação financeira</div>
+        <div class="grid">
+          <div class="grid-item">
+            <label for="renda">Renda líquida mensal (R$)</label>
+            <input type="number" id="renda" placeholder="Ex: 5000" />
+          </div>
+          <div class="grid-item">
+            <label for="reserva">Reserva de emergência (R$)</label>
+            <input type="number" id="reserva" placeholder="Ex: 15000" />
+          </div>
+          <div class="grid-item">
+            <label for="prazo">Prazo desejado (meses)</label>
+            <input type="number" id="prazo" placeholder="Ex: 60" />
+          </div>
+        </div>
+
+        <div class="card-title">3. Perfil e urgência</div>
+        <div class="grid">
+          <div class="field">
+            <label for="urgencia">Precisa do dinheiro agora?</label>
+            <select id="urgencia">
+              <option value="sim">Sim, urgente</option>
+              <option value="nao">Não, posso aguardar</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="credito">Histórico de crédito</label>
+            <select id="credito">
+              <option value="bom">Bom (score alto)</option>
+              <option value="regular">Regular</option>
+              <option value="ruim">Ruim / restrito</option>
+            </select>
+          </div>
+        </div>
+
+        <button class="btn-primary" onclick="calcular()">
+          Calcular melhor opção
+        </button>
       </div>
 
-      <div class="grid">
-        <div class="grid-item">
-          <label for="valor">Valor necessário em (R$):</label>
-          <input type="number" id="valor" value="valor" />
-        </div>
-      </div>
-      <div class="field">
-        <label>Finalidade</label>
-        <select id="finalidade">
-          <option value="veiculo">Veículo</option>
-          <option value="casa">Casa</option>
-          <option value="outros">Outros</option>
-        </select>
-      </div>
       <div id="resultado" style="display: none">
         <div class="option-cards" id="opt-cards"></div>
         <div class="card">
           <table id="tabela-resultados"></table>
         </div>
-
         <div class="pros-grid" id="pros-grid"></div>
         <div class="recom" id="recom-box">
           <div class="recom-title" id="recom-title"></div>
@@ -47,5 +86,7 @@
         </div>
       </div>
     </div>
+
+    <script src="script.js"></script>
   </body>
 </html>
