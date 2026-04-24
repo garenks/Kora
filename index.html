@@ -60,13 +60,22 @@
               <option value="nao">Não, posso aguardar</option>
             </select>
           </div>
+
           <div class="field">
-            <label for="credito">Histórico de crédito</label>
-            <select id="credito">
-              <option value="bom">Bom (score alto)</option>
-              <option value="regular">Regular</option>
-              <option value="ruim">Ruim / restrito</option>
-            </select>
+            <label for="credito">
+              Score de crédito: <span id="score-valor">500</span></label
+            >
+            <input
+              type="range"
+              id="credito"
+              min="0"
+              max="1000"
+              value="500"
+              oninput="atualizarScore(this.value)"
+            />
+            <div class="score-faixa faixa-regular" id="score-faixa">
+              Regular - aprovação com taxas altas
+            </div>
           </div>
         </div>
 

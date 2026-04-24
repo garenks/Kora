@@ -183,6 +183,65 @@ body {
   margin-bottom: 4px;
 }
 
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 4px;
+  border-radius: 4px;
+  background: #e0e0e0;
+  outline: none;
+  cursor: pointer;
+}
+
+.btn-primary {
+  width: 100%;
+  padding: 11px;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 8px;
+  border: none;
+  background: #08a382;
+  color: #ffffff;
+  cursor: pointer;
+  margin-top: 8px;
+}
+
+.btn-primary:hover {
+  background: #068868;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #08a382;
+  cursor: pointer;
+  border: 2px solid #ffffff;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+}
+
+.score-faixa {
+  font-size: 12px;
+  font-weight: 500;
+  margin-top: 6px;
+}
+
+.faixa-ruim {
+  color: #e24b4a;
+}
+.faixa-regular {
+  color: #e8a030;
+}
+.faixa-bom {
+  color: #1d9e75;
+}
+.faixa-otimo {
+  color: #0f6e56;
+}
+
 .recom-body {
   font-size: 13px;
   color: #0f6e56;
