@@ -1,3 +1,4 @@
+// Atualização do score e classificação por cores
 function atualizarScore(valor) {
   document.getElementById("score-valor").textContent = valor;
 
@@ -16,4 +17,16 @@ function atualizarScore(valor) {
     faixaEl.textContent = "Ótimo - melhores taxas do mercado";
     faixaEl.className = "score-faixa faixa-otimo";
   }
+}
+
+function calcularParcela(valorTotal, meses, taxa) {
+  if (taxa === 0) return valorTotal / meses;
+  return (
+    (valorTotal * (taxa * Math.pow(1 + taxa, meses))) /
+    (Math.pow(1 + taxa, meses) - 1)
+  );
+}
+
+function formatarMoeda(valor) {
+  return "R$ " + Math.round(valor).toLocaleString("pt-BR");
 }
